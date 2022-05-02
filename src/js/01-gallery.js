@@ -19,11 +19,6 @@ function createGalleryItemsMarkup(galleryItems) {
     }).join('');
 };
 
-function onGalleryItemsContainerClick(event) {
-    event.preventDefault();
-};
-
-galleryItemsContainer.addEventListener('click', onGalleryItemsContainerClick);
 
 const lightboxGallery = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',

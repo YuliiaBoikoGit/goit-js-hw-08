@@ -10,10 +10,14 @@ formDataValueFromLocalStorage();
 function onFormSubmit(event) {
     event.preventDefault();
 
-    console.log(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
+    if (email.value.length <= 0 || message.value.length <= 0) {
+        return;
+    } else {
+        console.log(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
 
-    event.currentTarget.reset();
-    localStorage.removeItem(LOCALSTORAGE_KEY);
+        event.currentTarget.reset();
+        localStorage.removeItem(LOCALSTORAGE_KEY);
+    }
 };
 
 function onFormChange(event) {
